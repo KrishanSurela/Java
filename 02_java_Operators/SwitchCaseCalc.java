@@ -11,7 +11,7 @@ public class SwitchCaseCalc {
         System.out.println("Enter Operator :");
 
         int Operator = sc.next().charAt(0);
-
+        sc.close();
         switch (Operator) {
             case '+':
                 System.out.println(num1+num2);

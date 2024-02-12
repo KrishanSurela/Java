@@ -394,21 +394,139 @@ returnType name(type param1,type param2){ //parameter
 -   here can be also number of parameters are different.
 
 ```java
+//Function Overloading Using Parameter and datatypes
 public static int sum(int a,int b){//5,9
-    int sum = a+b;
+    return a+b;
 }
 public static int sum(int a,int b,int c){//5,9,6
-    int sum = a+b+c;
+    return a+b+c;
 }
 public static float sum(float a,float b){//8.5,9.4
-    flaot sum = a+b;
+   return a+b;
 }
 public static double sum(double a,double b){//8.5,9.4
-    double sum = a+b;
+    return a+b;
 }
 
 System.out.println(sum(5,9));
 System.out.println(sum(5,9,6));
+System.out.println(sum(8.5f,9.4f));
 System.out.println(sum(8.5,9.4));
-System.out.println(sum(8.5,9.4));
+
 ```
+
+## Convert a Number from Binary to Decimal ->
+
+```java
+n=1001
+decimal = 1*8 + 0*4 + 0*2 + 1*1 =>9
+
+//logic
+
+int dec =0;
+int pow =0;
+while(n!=0){
+    lastDigit = n%10;
+    dec = dec + lastDigit * 2^pow;
+    n=n/10;
+}
+
+//code
+
+public static void binToDec(int n){
+    int dec =0;
+    int pow =0;
+    int realBin =n ;
+    while(n>0){
+        int lastDigit = n%10;
+        dec = dec + (lastDigit * (int)Math.pow(2, pow));
+        pow++;
+        n=n/10;
+    }
+
+    System.out.println("Decimal Number of \""+realBin+"\" is : "+dec);
+}
+public static void main(String[] args) {
+    binToDec(111);
+}
+```
+
+## ## Convert a Number from Decimal to Binary ->
+
+```java
+
+//logic
+
+n=7
+
+7%2=>1  ^
+3%2=>1  |
+1%2=>1  |
+
+Bin = 111
+
+// Logic
+
+n=11;
+bin=0;
+while(n>0){
+    rem=n%2;
+    bin =bin+rem*10^pow;
+    n=n/2;
+    pow++;
+}
+
+//code
+
+public static void decToBin(int num){
+    int originalNum =num;
+    int bin=0;
+    int rem;
+    int pow=0;
+    while(num>0){
+        rem=num%2;
+        bin = bin + (rem*(int)Math.pow(10,pow));
+        num=num/2;
+        pow++;
+    }
+    System.out.println("Binary Number of \""+originalNum+"\" is "+bin);
+}
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter Decimal Number :");
+    int num = sc.nextInt();
+    decToBin(num);
+    sc.close();
+}
+```
+## Scope =>
+
+### Method Scope ->
+
+#### Variables declared directly inside a method are available anywhere in the method following the line of code in which they were declared
+```java
+public class Main {
+    public static void main(String[] args) {
+        int x = 100; // x has method scope
+        System.out.println(x); // x can be used here
+    }
+}
+
+```
+### Block Scope ->
+
+#### A block of code refers to all of the code between curly braces {}. Variables declared inside blocks of code are only accessible by the code between the curly braces, which follows the line in which the variable was declared.
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        { // This is a block
+            int x = 100; // x has block scope
+            System.out.println(x); // x can be used here
+        }
+        // x cannot be used here, it's out of scope
+    }
+}
+
+```
+
