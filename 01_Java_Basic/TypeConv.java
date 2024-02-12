@@ -27,7 +27,6 @@ public class TypeConv {
         System.out.println(number3);//122
         System.out.println(number2);//65
         System.out.println(number4);//90
-       
         System.out.println(a);//9.0
     }
     

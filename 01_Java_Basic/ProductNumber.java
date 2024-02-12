@@ -13,6 +13,6 @@ public class ProductNumber {
         int product = a*b;
 
         System.out.println("Product of given Number is : "+product);
-
+        sc.close();
     }
 }
