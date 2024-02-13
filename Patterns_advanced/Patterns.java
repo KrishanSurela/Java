@@ -1,6 +1,5 @@
 package Patterns_advanced;
-
-import javax.sound.midi.Soundbank;
+ 
 
 public class Patterns {
     public static void hollow_Rect(int rows,int cols){
