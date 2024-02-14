@@ -499,11 +499,13 @@ public static void main(String[] args) {
     sc.close();
 }
 ```
+
 ## Scope =>
 
 ### Method Scope ->
 
 #### Variables declared directly inside a method are available anywhere in the method following the line of code in which they were declared
+
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -513,6 +515,7 @@ public class Main {
 }
 
 ```
+
 ### Block Scope ->
 
 #### A block of code refers to all of the code between curly braces {}. Variables declared inside blocks of code are only accessible by the code between the curly braces, which follows the line in which the variable was declared.
@@ -530,3 +533,118 @@ public class Main {
 
 ```
 
+## Arrays =>
+
+### List of elements of the same type placed in a contiguous memory location.
+
+## Operations in arrays =>
+
+-   Create
+-   Input
+-   Output
+-   Update
+
+### Creating an Array
+
+```java
+datatype arrayName[] = new datatype[size];
+
+int narks[] = new int[50];
+
+int numbers[] = {52,53,55};
+
+String fruits[] = {"apple","mango","orange"};
+```
+
+### Input in an Array =>
+
+```java
+
+
+Scanner sc = new Scanner(System.in);
+
+System.out.println("Enter Your Array Size");
+int arraySize = sc.nextInt();
+
+int marks [] = new int[arraySize];
+
+for(int i=0;i<arraySize;i++){
+   System.out.println("Give a number at position : "+i);
+   marks[i]=sc.nextInt();
+}
+for(int i=0;i<arraySize;i++){
+   System.out.println("A number at position : "+i+" is "+marks[i]);
+   marks[i]=sc.nextInt();
+}
+
+```
+
+## Passing arrays as argument =>
+
+```java
+// By call by reference
+public class passingArrayArgs {
+   public static void update(int marks[],int n){
+        n=10;
+       for(int i=0;i<marks.length;i++){
+           marks[i]=marks[i]+1;
+       }
+   }
+   public static void main(String[] args) {
+       int marks[] = {88,98,95};
+       int nonChangable = 6;
+
+       update(marks,nonChangable);
+       System.out.println(nonChangable);
+   }
+}
+```
+
+## Binary Searh ->
+
+### The array should be sorted as Binary Search works on sorted arrays. If the array is not sorted, we’ll need to sort it before using Binary Search.
+
+### Does not matter array is sorted in order to increasing or decreasing.
+
+```java
+    public static int BinaryS(int numbers [],int key){
+        int start =0;
+        int end = numbers.length-1;
+        while(start<=end){
+            int mid  = (start+end)/2;
+            //comparisons
+            if(numbers[mid]==key){
+                return mid;
+            }
+            if(numbers[mid]<key){ // right part
+                start = mid+1;
+            }
+            else{ // left part
+                end = mid-1;
+            }
+        }
+        return -1;
+    }
+```
+
+## Time Complexity of Binary Search->
+
+```java
+
+                  loop runs
+Iteration 1 =>       n        =>(n/2power0)
+Iteration 2 =>       n/2      =>(n/2power1)
+Iteration 3 =>       n/4      =>(n/2power2)
+Iteration 4 =>       n/8      =>(n/2power3)
+Iteration 5 =>       n/16     =>(n/2power4)
+          .
+          .
+          .
+          .
+
+n/2power(k) = 1 (in worst case) Means loop runs till the n
+
+=> n = 2power(k) => k = log(base2)(n)
+
+=> O(log n)
+```
