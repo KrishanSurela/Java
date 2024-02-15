@@ -1,5 +1,4 @@
-package Arrays;
-
+ 
 public class Kadanes {
     public static void kadanesSum(int numbers[]){
         int currentSum=0;

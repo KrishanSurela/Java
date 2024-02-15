@@ -648,3 +648,115 @@ n/2power(k) = 1 (in worst case) Means loop runs till the n
 
 => O(log n)
 ```
+
+## Trapping Rainwater =>
+
+-   1. Minimum numbe of bars >=2
+-   2. Bars in Ascending or Descending Order(no water trapped)
+
+-   3. if there are 3 and more bars then we will find maximum of left bar and max of right bar. in those maximum which one is minimum that is water level.
+-   water level=min(max(left),max(right));
+-   4. trapped water = (water level - bar level or height )\*width
+
+-   bar height and bar width are given is question.
+
+-   to calculate max(left),max(right) we use Auxiliary Array (helper array)
+
+## Sorting => Arrange in an order
+
+-   Bubble Sort
+-   Selection Sort
+-   Insertion Sort
+-   Counting Sort
+
+### Bubble Sort =>
+
+#### Large elements come to the end of the array by swapping with adjacent elements.
+
+```java
+
+public class BubbleSort {
+    public static void BubbleS(int arr[]){
+
+        int swapped=0;
+        int n = arr.length;
+        for(int turn =0;turn<=n-2;turn++){
+
+            for(int j=0;j<=n-2-turn;j++){
+                if(arr[j]>arr[j+1]){
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1]=temp;
+                    swapped++;
+                }
+            }
+        }
+        if(swapped==0){
+            System.out.println("The array is already sorted");
+        }
+    }
+    public static void printArray(int arr[]){
+        for(int i =0;i<arr.length;i++){
+            System.out.print(arr[i]+" ");
+        }
+    }
+    public static void main(String[] args) {
+        int arr [] ={1,2,3,4,5};
+        BubbleS(arr);
+        printArray(arr);
+    }
+}
+
+```
+
+## Selection Sort =>
+
+### Pick the smallest (from unsorted),putit ar the biginning
+
+```java
+public class SelectionSort {
+    public static void selectionSort(int arr[]) {
+        int n = arr.length;
+        for (int i = 0; i < n-1; i++) {
+            // Find the minimum element in unsorted array
+            int min_idx = i;
+            for (int j = i+1; j < n; j++){
+                if (arr[j] < arr[min_idx]){
+                    min_idx = j;
+                }
+            }
+            // Swap the found minimum element with the first element of the unsorted part
+            int temp = arr[min_idx];
+            arr[min_idx] = arr[i];
+            arr[i] = temp;
+        }
+    }
+    public static void printArray(int arr[]){
+        for(int i =0;i<arr.length;i++){
+            System.out.print(arr[i]+" ");
+        }
+    }
+    public static void main(String[] args) {
+        int numbers[]= {3,5,2,1,4};
+        selectionSort(numbers);
+        printArray(numbers);
+    }
+}
+```
+## Insertion Sort =>
+
+### Pick an element (from unsorted part) and place in the right pos in sorted part.
+
+## 2D Array =>
+
+```java 
+    int matrix[][] = new int [3][3];
+    // number of rows in 2d array
+    int rows = matrix.length;
+    //number of columns in 2d array
+    int cols = matrix[0].length;
+
+```
+
+### Spiral Matrix =>
+

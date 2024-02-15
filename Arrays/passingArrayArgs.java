@@ -1,5 +1,4 @@
-package Arrays;
-
+ 
 public class passingArrayArgs {
     public static void update(int marks[],int n){
         n=10;

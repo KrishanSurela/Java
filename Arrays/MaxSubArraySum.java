@@ -1,4 +1,4 @@
-package Arrays; 
+ 
 public class MaxSubArraySum {
     public static void MaxSArraySum(int numbers[]){  
         int largestSum = Integer.MIN_VALUE; 

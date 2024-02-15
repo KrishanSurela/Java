@@ -1,5 +1,4 @@
-package Arrays;
-
+ 
 public class PairInArray {
     public static void pair(int numbers[]){
         int totalPairs=0;

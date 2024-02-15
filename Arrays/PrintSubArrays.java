@@ -1,5 +1,4 @@
-package Arrays;
-
+ 
 public class PrintSubArrays { // a continuous part of array
     public static void printSubArrays(int numbers[]){
         int ts =0;

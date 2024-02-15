@@ -1,5 +1,4 @@
-package Arrays;
-
+ 
 public class MaxSubArrayPrefixSumApproach {
     public static void MaxPrefixSum(int numbers[]){
         int currSum = 0;
