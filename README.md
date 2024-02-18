@@ -743,13 +743,14 @@ public class SelectionSort {
     }
 }
 ```
+
 ## Insertion Sort =>
 
 ### Pick an element (from unsorted part) and place in the right pos in sorted part.
 
 ## 2D Array =>
 
-```java 
+```java
     int matrix[][] = new int [3][3];
     // number of rows in 2d array
     int rows = matrix.length;
@@ -760,3 +761,34 @@ public class SelectionSort {
 
 ### Spiral Matrix =>
 
+### Approach =>
+
+```java 1st iteration        2nd
+    start row   0                     1       ++
+    end row     3 (n-1)               2       --
+    start col   0                     1       ++
+    end col     3                     2       --
+```
+
+## Search in Sorted Matrix (StairCase Search)=>
+
+```java
+Condition for cell (0,m-1)
+
+key<cell value => LEFT
+key>cell value => Bottem
+
+while
+row<matrix[0].length && col>=0
+
+Condition for cell (n-1,0)
+
+key<cell value => TOP
+key> cell value => RIGHT
+
+
+
+When n-1 goes to 0 and m-1 goes to 0 then search item is not exist.
+
+
+```
