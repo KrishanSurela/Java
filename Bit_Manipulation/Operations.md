@@ -127,7 +127,16 @@ Here 8 is power of 2
 ## count set bit (occurance of 1)
 
 ```java
-
+ public static int countSet(int number){
+        int counter=0;
+        while(number>0){
+            if((number&1)!=0){ //Check Least Significant Bit 1 or 0 
+                counter++;
+            }
+            number =number>>1; 
+        }
+        return counter;
+    }
 ```
 
 ## Fast Exponentiation ->
