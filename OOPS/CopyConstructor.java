@@ -1,4 +1,4 @@
-package OOPS;
+ 
 
 public class CopyConstructor {
     public static void main(String[] args) {
@@ -23,7 +23,11 @@ public class CopyConstructor {
         System.out.println(s2.name+" "+s2.roll+" "+s2.address);
 
         for(int i= 0;i<4;i++){
-            System.out.println(s1.marks[i]);
+            System.out.print(s1.marks[i]);
+        }
+        System.out.println();
+        for(int i= 0;i<4;i++){
+            System.out.print(s2.marks[i]);
         }
     }
 }
@@ -37,11 +41,26 @@ class Student{
         this.roll=roll;
         this.name=name;
     }
+    // Shallow copy constructor
+    // Student(Student s1){
+    //     this.name=s1.name;
+    //     this.roll=s1.roll;
+    //     this.address=s1.address;
+    //     this.marks=s1.marks;//s1.marks is a reference of array esliye  s2 ke ander s1 ko copy krne ke baad s1 me change krte hai to s2 me bhi change ho jata hai.
+    // }
 
+    // Deep Copy Constructor
     Student(Student s1){
         this.name=s1.name;
         this.roll=s1.roll;
-        this.address=s1.address;
-        this.marks=s1.marks;//s1.marks is a reference of array esliye  s2 ke ander s1 ko copy krne ke baad s1 me change krte hai to s2 me bhi change ho jata hai.
+
+        for(int i=0;i<marks.length;i++){
+            this.marks[i]= s1.marks[i];
+        }
+        // ab s2 ke ander s1 ko copy krne ke baad s1 ke ander change krne pr s2 me changes nhi hota.
     }
+
+    // Lazy Copy => It is a technique that combines shallow copy and deep copy to optimize the performance and memory usage of object cloning.
+
+
 }

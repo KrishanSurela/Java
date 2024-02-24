@@ -792,3 +792,91 @@ When n-1 goes to 0 and m-1 goes to 0 then search item is not exist.
 
 
 ```
+
+## The toString() method in Java is invoked automatically when an object needs to be represented as a string. Here are some common scenarios when toString() gets invoked:
+
+-   Printing Objects: When you try to print an object using System.out.println(), Java automatically invokes the toString() method on the object to get a string representation of it.
+    Java
+
+```java
+Complex c = new Complex(1.0, 2.0);
+
+System.out.println(c);  // This will invoke c.toString()
+```
+
+-   String Concatenation: If you concatenate an object with a string, Java will automatically call the toString() method on the object.
+    Java
+
+```java
+String s = "Complex number: " + c;  // This will invoke c.toString()
+```
+
+-   In Debugging: Debugging tools often use toString() to provide a string representation of objects.
+
+## Exception Handling =>
+
+## Source code ke karan generate hone wali error ko Exception kahte hai.
+
+### Built In Exceptions =>
+
+-   ClassNotFoundException
+-   SQLException
+-   FileNotFoundException
+-   ArrayIndexOutOfBoundsException
+-   NullPointerException
+-   ArithmeticException
+-   IOException
+
+### Program ko bina terminate kiye process ko continue krna exception handling kahte hai.
+
+```java
+class A{
+    public static void main(String arr []){
+        int arr [] ={1,2,3,4,5,5};
+        try{
+            int a = arr[10];
+        }catch(ArrayIndexOutOfBoundsException e){
+            System.out.println(e.getMessage());
+        }
+    }
+}
+class B{
+    public static void main(String arr []){
+        int arr [] ={1,2,3,4,5,5};
+        int arr2[] ={2,3,5,0,5,9};
+        try{
+            for(int i=0;i<6;i++){
+                System.out.println(arr[i]/arr1[i]);
+            }
+        }catch(ArithmeticException e){
+            System.out.println(e.getMessage());
+        }
+    }
+}
+```
+
+## finally => finally statement execute the code after try and catch.
+
+## throw => The throw statement allows us to create a user defined exception.
+
+```java
+public class Main {
+  static void checkAge(int age) {
+    if (age < 18) {
+      throw new ArithmeticException("Access denied - You must be at least 18 years old.");
+    }
+    else {
+      System.out.println("Access granted - You are old enough!");
+    }
+  }
+
+  public static void main(String[] args) {
+    checkAge(15); // Set age to 15 (which is below 18...)
+  }
+}
+```
+
+## Recursion => the function calling itself called recursion.
+
+## Recursion is a method of solving a computational problem where the solutions to smaller instances of the same problem.
+

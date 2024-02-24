@@ -1,4 +1,4 @@
-package OOPS;
+ 
 class MyAddress{
     public String name;  // public type ke data member apne package me access kr skte hai sath ki sath dusre package me bhi access kr skte hai
     int number; // default

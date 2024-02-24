@@ -1,5 +1,4 @@
-package OOPS;
-
+ 
 public class Getter_setter {
     public static void main(String[] args) {
         Bank b = new Bank();
