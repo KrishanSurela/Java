@@ -596,7 +596,10 @@ public class passingArrayArgs {
        int nonChangable = 6;
 
        update(marks,nonChangable);
-       System.out.println(nonChangable);
+       System.out.println(nonChangable);//6
+       for(int i=0;i<marks.length;i++){
+          System.out.print(marks[i]+" "); // 89 99 96
+       }
    }
 }
 ```
