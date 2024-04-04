@@ -575,7 +575,7 @@ for(int i=0;i<arraySize;i++){
 }
 for(int i=0;i<arraySize;i++){
    System.out.println("A number at position : "+i+" is "+marks[i]);
-   marks[i]=sc.nextInt();
+   
 }
 
 ```
