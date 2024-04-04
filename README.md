@@ -312,14 +312,14 @@ System.out.println("Enter Your Number :");
                 if(n%i==0){
                     isPrime = false;
                 }
-            }
+            } 
+        }
 
-            if(isPrime==true){
-                System.out.println("Given Number is Prime");
-            }
-            else{
-                System.out.println("Not Prime");
-            }
+        if(isPrime==true){
+            System.out.println("Given Number is Prime");
+        }
+        else{
+            System.out.println("Not Prime");
         }
 ```
 
