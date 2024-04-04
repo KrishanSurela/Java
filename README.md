@@ -428,6 +428,7 @@ int pow =0;
 while(n!=0){
     lastDigit = n%10;
     dec = dec + lastDigit * 2^pow;
+    pow++;
     n=n/10;
 }
 
