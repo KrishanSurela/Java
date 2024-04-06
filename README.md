@@ -312,14 +312,14 @@ System.out.println("Enter Your Number :");
                 if(n%i==0){
                     isPrime = false;
                 }
-            }
+            } 
+        }
 
-            if(isPrime==true){
-                System.out.println("Given Number is Prime");
-            }
-            else{
-                System.out.println("Not Prime");
-            }
+        if(isPrime==true){
+            System.out.println("Given Number is Prime");
+        }
+        else{
+            System.out.println("Not Prime");
         }
 ```
 
@@ -428,6 +428,7 @@ int pow =0;
 while(n!=0){
     lastDigit = n%10;
     dec = dec + lastDigit * 2^pow;
+    pow++;
     n=n/10;
 }
 
@@ -574,7 +575,7 @@ for(int i=0;i<arraySize;i++){
 }
 for(int i=0;i<arraySize;i++){
    System.out.println("A number at position : "+i+" is "+marks[i]);
-   marks[i]=sc.nextInt();
+   
 }
 
 ```
@@ -595,7 +596,10 @@ public class passingArrayArgs {
        int nonChangable = 6;
 
        update(marks,nonChangable);
-       System.out.println(nonChangable);
+       System.out.println(nonChangable);//6
+       for(int i=0;i<marks.length;i++){
+          System.out.print(marks[i]+" "); // 89 99 96
+       }
    }
 }
 ```
