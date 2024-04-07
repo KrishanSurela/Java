@@ -2,7 +2,7 @@ package Collection_Framwork;
 
 import java.util.*;
 
-public class PairSum2PointerApproach {
+public class PairSumTwoPointerApproach {
     public static boolean PairSum(ArrayList<Integer> list, int target) {
         int lp = 0;
         int rp = list.size() - 1;
@@ -30,9 +30,9 @@ public class PairSum2PointerApproach {
 
         int target = 5;
         Boolean b = PairSum(list, target);
-        if(b){
+        if (b) {
             System.out.println("Target pair Exist");
-        }else{
+        } else {
             System.out.println("Target pair not Exist");
         }
     }
