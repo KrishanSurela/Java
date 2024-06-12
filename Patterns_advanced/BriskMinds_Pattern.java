@@ -5,7 +5,7 @@ public class BriskMinds_Pattern {
                 if ((i == 4 && j == 3) || (i == 4 && j == 2) || (i == 3 && j == 2)) {
                     System.out.print("  ");
                 } else {
-                    System.out.print(j + " ");
+                      System.out.print(j + " ");
                 }
             }
             for (int k = 0; k < 2 * (5 - i) - 1; k++) {
@@ -18,6 +18,7 @@ public class BriskMinds_Pattern {
                     System.out.print(l + " ");
                 }
             }
+
             System.out.println();
         }
     }
