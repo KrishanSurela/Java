@@ -11,15 +11,15 @@ public class RemoveElementFromArray {
                 arr[i - counter] = arr[i];
             }
         }
-        for (int i = n - counter; i < n; i++) {
-            arr[i] = 0;
-        }
         for (int i = 0; i < n; i++) {
+            if(i>=n-counter){
+                arr[i] = 0;
+            }
             System.out.print(arr[i] + " ");
         }
     }
 }
 
-Output :
+Output:
 
-61 82 63 35 48 85 0 0 0 0 
+61 82 63 35 48 85 0 0 0 0
